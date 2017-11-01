@@ -1,2 +1,3 @@
 # CoreMLDemo
-let Go:us Demo
+let Go:us
+CoreML Demo
