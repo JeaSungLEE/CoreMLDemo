@@ -21,15 +21,15 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-}
-
-extension ViewController {
     @IBAction func buttonAction(_ sender: Any) {
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.sourceType = .savedPhotosAlbum
         present(pickerController, animated: true)
     }
+}
+
+extension ViewController {
     
     func detectScene(image: CIImage) {
     }
@@ -40,7 +40,7 @@ extension ViewController: UIImagePickerControllerDelegate {
         dismiss(animated: true)
         
         guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {
-            fatalError("이미지를 못불러와쪄영")
+            fatalError("이미지를 못불러왔습니다.")
         }
         
         imageView.image = image
